@@ -1,14 +1,16 @@
 ---
-
+import Tema from "./Tema.astro";
 ---
 
 <header class="flex justify-center items-center py-3 xl:w-[1120px] mx-auto">
-  <nav class="flex flex-col gap-x-10 gap-5 opacity-80">
+  <nav class="flex flex-col gap-x-10 gap-5 opacity-80
+  text-black dark:text-indigo-300">
     <a href="#top">Inicio</a>
     <a href="#sobre-mi">Sobre mi</a>
     <a href="#Experiencia">Experiencia</a>
     <a href="#Proyectos">Proyectos</a>
     <a href="#contacto">Contacto</a>
+    <Tema/>
   </nav>
 </header>
 
