@@ -12,6 +12,7 @@ import Maleta from "../components/Icons/Maleta.astro";
 import Skill from "../components/Icons/Skill.astro";
 import Code from "../components/Icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Habilidades from "../components/Habilidades.astro";
 ---
 
 <Layout title="Porfolio de Vanessa  - Analista" description="Mi portafolio">
@@ -79,13 +80,14 @@ import Projects from "../components/Projects.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="Habilidades">
+    <SectionContainer id="Habilidades" class="flex-wrap">
       <h2
         class="text-xl text-[#000000] dark:text-[#fafbfd]  md:text-2xl font-semibold mb-4 md:mb-6 flex gap-x-2 md:gap-x-3 items-center"
       >
         <Skill class="w-6 h-6 md:w-7 md:h-7" />
         Habilidades
       </h2>
+      <Habilidades />
     </SectionContainer>
 
     <SectionContainer id="Proyectos">

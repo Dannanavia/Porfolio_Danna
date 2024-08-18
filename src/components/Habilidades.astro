@@ -1,0 +1,120 @@
+---
+import Net from "./Icons/Net.astro";
+import PowerBi from "./Icons/Power_Bi.astro";
+import MySql from "./Icons/MySql.astro";
+import Bootstrap from "./Icons/Bootstrap.astro";
+import Python from "./Icons/Py.astro";
+import Tailwind from "./Icons/Tailwind.astro";
+import Oracle from "./Icons/Oracle.astro";
+import Postgres from "./Icons/Postgres.astro";
+import MongoDb from "./Icons/MongoDb.astro";
+import Waos from "./Icons/Waos.astro";
+import Js from "./Icons/Js.astro";
+
+
+const habilidades = [
+  {
+    name: ".Net",
+    class:
+      "bg-[#fffff] text-black dark:text-purple-400 border border-purple-400",
+    icon: Net,
+  },
+  {
+    name: "Power Bi",
+    class: "",
+    icon: PowerBi,
+  },
+  {
+    name: "Bootstrap",
+    class:
+      "bg-[#fffff]  text-black dark:text-purple-400 border border-purple-400",
+    icon: Bootstrap,
+  },
+  {
+    name: "Python",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Python,
+  },
+  {
+    name: "Tailwind",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Tailwind,
+  },
+  {
+    name: "Oracle",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Oracle,
+  },
+  {
+    name: "Postgres",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Postgres,
+  },
+  {
+    name: "Mongo Db",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: MongoDb,
+  },
+  {
+    name: "Astro",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Waos,
+  },
+  {
+    name: "JS",
+    class: "bg-[#fffff]  text-black dark:text-blue-400 border border-blue-400",
+    icon: Js,
+  }
+];
+---
+
+<div class="flex flex-wrap items-center justify-center">
+    {
+      habilidades.map((hab) => (
+        <div class="skill ">
+          <hab.icon class="size-20 skill-icon" />
+          <span class="tooltip">{hab.name}</span>
+        </div>
+      ))
+    }
+  </div>
+  <style>
+    .skill {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      width: 80px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: -70%;
+      left: 50%;
+      margin-left: -40px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .skill:hover .skill-icon {
+      transform: scale(1.1);
+    }
+
+    .skill:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
